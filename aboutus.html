@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Gym Equipment</title>
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        /* General Styling */
+        body {
+            background-color: #e8f0f2;
+            color: #2c3e50;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Navigation Styling */
+        .navbar {
+            background-color: #1f2833;
+        }
+
+        .navbar-brand, .navbar-nav .nav-link {
+            color: #66fcf1 !important;
+            font-weight: 500;
+        }
+
+        .navbar-brand:hover, .navbar-nav .nav-link:hover {
+            color: #45a29e !important;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: #0b0c10;
+            color: #fff;
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .hero-section h1 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        .hero-section p {
+            font-size: 1.2rem;
+            margin-top: 20px;
+        }
+
+        /* About Us Section */
+        .about-history, .owner-section, .product-section {
+            padding: 60px 0;
+        }
+
+        .about-history h2, .owner-section h2, .product-section h2 {
+            color: #0b0c10;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .about-history p, .owner-section p, .product-section p {
+            font-size: 1.1rem;
+            color: #333;
+        }
+
+        .owner-img {
+            max-width: 100%;
+            border-radius: 50%;
+            margin-top: 20px;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .btn-custom {
+            background-color: #66fcf1;
+            border: none;
+            color: #1f2833;
+            padding: 10px 20px;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        .btn-custom:hover {
+            background-color: #45a29e;
+        }
+
+        /* Timeline Styling */
+        .timeline {
+            border-left: 4px solid #45a29e;
+            margin-left: 30px;
+            padding-left: 20px;
+        }
+
+        .timeline .event {
+            margin-bottom: 30px;
+        }
+
+        .timeline .event h3 {
+            font-size: 1.5rem;
+            color: #0b0c10;
+        }
+
+        .timeline .event p {
+            font-size: 1rem;
+        }
+
+        /* Footer Styling */
+        footer {
+            background-color: #1f2833;
+            color: #c5c6c7;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* JavaScript-controlled Elements */
+        .hidden-section {
+            display: none;
+        }
+
+        .visible {
+            display: block !important;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Gym Equipments</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <h1>About Us</h1>
+            <p>Discover the story behind Gym Equipments and our commitment to delivering the best fitness gear for all.</p>
+        </div>
+    </section>
+
+    <!-- About History Section -->
+    <section class="about-history">
+        <div class="container">
+            <h2>Our History</h2>
+            <div class="timeline">
+                <div class="event">
+                    <h3>Founded in 2010</h3>
+                    <p>Our journey began in 2010 with a small workshop and a vision to provide premium quality gym equipment for both home and commercial use.</p>
+                </div>
+                <div class="event">
+                    <h3>Expansion in 2015</h3>
+                    <p>By 2015, we had expanded to serve a global market, supplying gyms and fitness centers across the world.</p>
+                </div>
+                <div class="event">
+                    <h3>Today</h3>
+                    <p>Today, we are a leading name in the fitness industry, known for our durable, innovative equipment and outstanding customer service.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Owner Section -->
+    <section class="owner-section">
+        <div class="container text-center">
+            <h2>Our Founder</h2>
+            <div class="row justify-content-center">
+               
+                <div class="col-md-8 mt-4">
+                    <p>Our founder, John Doe, started this company out of a passion for fitness and an ambition to offer the best gym equipment at affordable prices. With over 15 years of experience in the fitness industry, John has made it his mission to design equipment that enhances performance, safety, and durability for all users.</p>
+                    <button class="btn btn-custom" onclick="showMore()">Learn More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hidden Section to Show with JS -->
+    <section class="hidden-section" id="hiddenSection">
+        <div class="container text-center">
+            <p>John has always believed that fitness is not just a routine but a lifestyle. His innovative products are the result of extensive research, real-world testing, and a relentless pursuit of excellence. Under his leadership, Gym Equipments has grown into a trusted brand for both individual fitness enthusiasts and professional gyms.</p>
+        </div>
+    </section>
+
+    <!-- Product Section -->
+    <section class="product-section">
+        <div class="container text-center">
+            <h2>Our Products</h2>
+            <p>At Gym Equipments, we offer a wide range of products designed to meet the needs of everyone from beginners to professional athletes. Whether you're looking for free weights, cardio machines, or specialized fitness equipment, we've got you covered.</p>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Gym Equipment. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- JavaScript for Hidden Section -->
+    <script>
+        function showMore() {
+            document.getElementById("hiddenSection").classList.toggle("visible");
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Gym Equipment</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            background-color: #f5f5f5;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Centering form */
+        .login-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #e8f0f2;
+        }
+
+        .login-card {
+            width: 400px;
+            padding: 40px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            background-color: #fff;
+        }
+
+        .login-card h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2rem;
+            color: #0b0c10;
+        }
+
+        .form-control {
+            margin-bottom: 20px;
+            border-radius: 8px;
+            padding: 15px;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+        }
+
+        .btn-login {
+            background-color: #45a29e;
+            color: #fff;
+            border-radius: 8px;
+            padding: 10px;
+            font-size: 1rem;
+            width: 100%;
+            border: none;
+        }
+
+        .btn-login:hover {
+            background-color: #66fcf1;
+            color: #000;
+        }
+
+        .alert {
+            display: none;
+        }
+
+        .form-text {
+            text-align: center;
+        }
+
+        /* Responsiveness */
+        @media (max-width: 768px) {
+            .login-card {
+                width: 90%;
+                padding: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Login Form Container -->
+    <div class="login-container">
+        <div class="login-card">
+            <h2>Login</h2>
+            <form id="loginForm" onsubmit="return validateForm()">
+                <div class="mb-3">
+                    <input type="email" id="email" class="form-control" placeholder="Enter your email" required>
+                </div>
+                <div class="mb-3">
+                    <input type="password" id="password" class="form-control" placeholder="Enter your password" required>
+                </div>
+                <button type="submit" class="btn btn-login">Login</button>
+                <div class="alert alert-danger mt-3" id="errorAlert">Invalid email or password</div>
+                <p class="form-text mt-3">Don't have an account? <a href="#">Sign up here</a></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- JavaScript for form validation -->
+    <script>
+        function validateForm() {
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+            const errorAlert = document.getElementById("errorAlert");
+
+            // Simple validation logic for demo
+            if (email === "user@example.com" && password === "password123") {
+                alert("Login successful!");
+                errorAlert.style.display = "none";
+                return true; // Allow form submission
+            } else {
+                errorAlert.style.display = "block"; // Show error message
+                return false; // Prevent form submission
+            }
+        }
+    </script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

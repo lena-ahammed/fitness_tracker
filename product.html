@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Gym Products</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            background-color: #f4f7f6;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Taskbar Styling */
+        .navbar {
+            background-color: #1f2833;
+        }
+
+        .navbar-brand, .navbar-nav .nav-link {
+            color: #66fcf1 !important;
+            font-weight: 500;
+        }
+
+        .navbar-brand:hover, .navbar-nav .nav-link:hover {
+            color: #45a29e !important;
+        }
+
+        /* Product Card Styling */
+        .product-card {
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            margin-bottom: 30px;
+            transition: transform 0.3s ease;
+        }
+
+        .product-card:hover {
+            transform: scale(1.05);
+        }
+
+        .product-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .product-details {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .product-details h5 {
+            color: #0b0c10;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .btn-buy {
+            background-color: #45a29e;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            font-size: 1rem;
+            border-radius: 8px;
+        }
+
+        .btn-buy:hover {
+            background-color: #66fcf1;
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Taskbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Gym Equipments</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Container for Products -->
+    <div class="container my-5">
+        <h2 class="text-center mb-4">Buy Gym Products</h2>
+
+        <div class="row">
+            <!-- Product 1 -->
+            <div class="col-md-4">
+                <div class="product-card">
+                    <img src="IMG1DB.jpg" alt="Dumbbells" class="product-img">
+                    <div class="product-details">
+                        <h5>Dumbbells Set</h5>
+                        <p>High-quality dumbbells for strength training.</p>
+                        <button class="btn btn-buy" onclick="buyProduct('Dumbbells Set')">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="col-md-4">
+                <div class="product-card">
+                    <img src="IMG3TD.jpg" alt="Treadmill" class="product-img">
+                    <div class="product-details">
+                        <h5>Treadmill</h5>
+                        <p>Advanced treadmill with customizable settings.</p>
+                        <button class="btn btn-buy" onclick="buyProduct('Treadmill')">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="col-md-4">
+                <div class="product-card">
+                    <img src="img6.png" alt="roller" class="product-img">
+                    <div class="product-details">
+                        <h5>roller</h5>
+                        <p>Perfect for cardio and core strength workouts.</p>
+                        <button class="btn btn-buy" onclick="buyProduct('Kettlebell')">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Product 4 -->
+            <div class="col-md-4">
+                <div class="product-card">
+                    <img src="img4.png" alt="cycle" class="product-img">
+                    <div class="product-details">
+                        <h5>cycle</h5>
+                        <p>cycle for bellyfat and cardio</p>
+                        <button class="btn btn-buy" onclick="buyProduct('Resistance Bands')">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 5 -->
+            <div class="col-md-4">
+                <div class="product-card">
+                    <img src="IMG2WE.jpg" alt="weight set" class="product-img">
+                    <div class="product-details">
+                        <h5>weight set</h5>
+                        <p>weight set for Barbell</p>
+                        <button class="btn btn-buy" onclick="buyProduct('Barbell Set')">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 6 -->
+            <div class="col-md-4">
+                <div class="product-card">
+                    <img src="img5.png" alt="forearm" class="product-img">
+                    <div class="product-details">
+                        <h5>forearm</h5>
+                        <p>best for forearm growth</p>
+                        <button class="btn btn-buy" onclick="buyProduct('Exercise Mat')">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JavaScript for Buy Button -->
+    <script>
+        function buyProduct(productName) {
+            alert(productName + " has been added to your cart!");
+        }
+    </script>
+
+</body>
+</html>
